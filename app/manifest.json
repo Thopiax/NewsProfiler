@@ -1,0 +1,31 @@
+{
+  "name": "News Reader Profiler",
+  "short_name": "Nws Prfilr",
+  "description": "None yet",
+  "version": "0.0.0",
+  "manifest_version": 2,
+  "default_locale": "en",
+  "icons": {
+    "16": "images/icon-16.png",
+    "128": "images/icon-128.png"
+  },
+  "background": {
+    "scripts": ["scripts/background.js"],
+    "persistent": false
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["scripts/content.js"]
+  }],
+  "permissions": [
+    "activeTab",
+    "browsingData",
+    "history",
+    "privacy",
+    "sessions",
+    "storage",
+    "tabs",
+    "topSites",
+    "<all_urls>"
+  ]
+}
